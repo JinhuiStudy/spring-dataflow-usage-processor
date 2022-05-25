@@ -1,0 +1,15 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: usage-detail
+        output:
+          destination: usage-cost
+      function:
+        bindings:
+          processUsageCost-in-0: input
+          processUsageCost-out-0: output
+
+server:
+  port: 0
